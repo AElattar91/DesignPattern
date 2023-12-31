@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "c91da274-e133-46c7-94e0-b77f4ca1fe6e",
+		"name": "Travware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10220568",
+		"_collection_link": "https://warped-resonance-64235.postman.co/workspace/Team-Workspace~51b7bcf4-265c-4405-888f-d16a3f8423eb/collection/10220568-c91da274-e133-46c7-94e0-b77f4ca1fe6e?action=share&source=collection_link&creator=10220568"
+	},
+	"item": [
+		{
+			"name": "Authenication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Method",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Method",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ayman",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ayman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "aymanayman",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "aymanayman",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/MyProfile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"MyProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Method",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "user3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/EditProfile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"EditProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Headers",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Request-Method",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "asdasdasdasd",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "asdasdasd",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eea6ecd-6da5-46b0-aac2-17ad8a442513"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/AddPost",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"AddPost"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/Posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ShowPost/16/sdasd-asdsad",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ShowPost",
+								"16",
+								"sdasd-asdsad"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "3|LwJAtwjtcC5GGPvUfzwFd7TKTjygOEm2zmj2AeSO27a47c8a",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
